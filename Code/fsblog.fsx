@@ -46,6 +46,7 @@ Environment.CurrentDirectory <- __SOURCE_DIRECTORY__
 type Config = YamlConfig<"config/config.yml">
 
 let config = new Config()
+let root = config.url.AbsoluteUri
 let title = config.title
 let subtitle = config.subtitle
 let description = config.description
