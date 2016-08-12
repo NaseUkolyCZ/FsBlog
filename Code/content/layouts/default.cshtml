@@ -1,4 +1,4 @@
-@using System.Linq
+﻿@using System.Linq
 @helper PostDate(DateTime rawDate) {
     <time datetime="@rawDate.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss")" pubdate data-updated="true">@rawDate.ToString("MMM d, yyyy")</time>
 }
@@ -28,10 +28,9 @@
     <div class="container">
 	
 		<div class="app-bar">
-			<a class="app-bar-element" href="...">Home</a>
+			<a class="app-bar-element" href="@Model.Root/index.html">@Model.SiteTitle</a>
 			<span class="app-bar-divider"></span>
 			<ul class="app-bar-menu">
-				<li><a href="">Home</a></li>
 				<li>
 					<a href="" class="dropdown-toggle">Products</a>
 					<ul class="d-menu" data-role="dropdown">
@@ -53,41 +52,12 @@
 				<li><a href="">Help</a></li>
 			</ul>
 		</div>  
-	
-		<div class="grid">
-			<div class="row">
-				<div class="cell">Ahoj</div>
-			</div>
-		</div>  
-	</div>  
-    <!-- 
-  	<div class="wrapper">
-	  <header>
-        <a href="@Model.Root/index.html" class="falseheader">@Model.SiteTitle</a>
-        <p>@Model.SiteSubtitle</p>
 
-        <p class="view"><a href="https://github.com/fsprojects/FsBlog">View the Project on GitHub</a></p>
-        <ul>
-          <li><a href="https://github.com/fsprojects/FsBlog">View On <strong>GitHub</strong></a></li>
-          <li><a href="https://github.com/fsprojects/FsBlog/issues">Report a <strong>Bug</strong></a></li>
-          <li><a href="https://github.com/fsprojects/FsBlog/issues/milestones">Check <strong>Progress</strong></a></li>
-        </ul>
-        <h2>Recent posts</h2>
-        @foreach (var post in Enumerable.Take(Model.Posts, 5))
-    		{
-    		    <h3 class="h2link"><a href="@Model.Root/blog/@post.Url/index.html">@post.Title</a></h3>
-    		    <p class="view"><small>@PostDate(post.Date)</small><br />@post.Abstract</p>
-    		}
-      </header>
-      <section>
-		    @RenderBody()
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://twitter.com/mattdrivendev">MattDrivenDev</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-  	</div>
-	-->
+        <div>
+		@RenderBody()
+		</div>  
+        }
+	</div>  
     <script src="@Model.Root/javascripts/scale.fix.js"></script>
   </body>
 </html>
