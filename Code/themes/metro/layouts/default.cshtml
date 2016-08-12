@@ -1,0 +1,63 @@
+﻿@using System.Linq
+@helper PostDate(DateTime rawDate) {
+    <time datetime="@rawDate.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss")" pubdate data-updated="true">@rawDate.ToString("MMM d, yyyy")</time>
+}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>@Title</title>
+    <link rel="stylesheet" href="@Model.Root/stylesheets/styles.css">
+    <link rel="stylesheet" href="@Model.Root/stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="@Model.Root/stylesheets/metro.css">
+    <link rel="alternate" href="@Model.Root/rss.xml" title="@Model.SiteTitle" type="application/rss+xml">
+    <link rel="shortcut icon" href="@Model.Root/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- FSharp.Formatting Styles -->
+  	<link rel="stylesheet" type="text/css" media="screen" href="@Model.Root/fsharp.formatting/tooltips.css" />
+  	<script type="text/javascript" src="@Model.Root/fsharp.formatting/tooltips.js"></script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<script type="text/javascript" src="@Model.Root/javascripts/jquery.js"></script>
+	<script type="text/javascript" src="@Model.Root/javascripts/metro.js"></script>
+  </head>
+  <body>
+    <div class="container">
+	
+		<div class="app-bar">
+			<a class="app-bar-element" href="@Model.Root/index.html">@Model.SiteTitle</a>
+			<span class="app-bar-divider"></span>
+			<ul class="app-bar-menu">
+				<li>
+					<a href="" class="dropdown-toggle">Products</a>
+					<ul class="d-menu" data-role="dropdown">
+						<li><a href="">Windows 10</a></li>
+						<li><a href="">Spartan</a></li>
+						<li><a href="">Outlook</a></li>
+						<li><a href="">Office 2015</a></li>
+						<li class="divider"></li>
+						<li><a href="" class="dropdown-toggle">Other Products</a>
+							<ul class="d-menu" data-role="dropdown">
+								<li><a href="">Internet Explorer 10</a></li>
+								<li><a href="">Skype</a></li>
+								<li><a href="">Surface</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="">Support</a></li>
+				<li><a href="">Help</a></li>
+			</ul>
+		</div>  
+
+        <div>
+		@RenderBody()
+		</div>  
+        }
+	</div>  
+    <script src="@Model.Root/javascripts/scale.fix.js"></script>
+  </body>
+</html>
