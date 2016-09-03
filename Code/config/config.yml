@@ -5,7 +5,7 @@
 url: http://fsprojects.github.io/FsBlog
 gitlocation: https://github.com/fsprojects/FsBlog.git
 gitbranch: gh-pages
-title: FsBlog
+title: NašeÚkoly.CZ
 subtitle: Blog aware, static site generation using F#.
 description: >
     FsBlog aims to be a blog-aware static site generator, mostly built in F#. But don't worry,

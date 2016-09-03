@@ -1,11 +1,19 @@
 @{
     Layout = "default";
-    Title = "FsBlog";
+    Title = "NašeÚkoly.CZ - Blog";
     Description = "A blog aware static site generator in mostly F#";
 }
 @using System.Linq
 
+
+<div style="width: 100%;" class="tile-group no-margin no-padding">
 @foreach (var post in Enumerable.Take(Model.Posts, 10))
 {
-    <a href="blog/@post.Url/index.html">@post.Title</a>
-}
+    <div  class="tile-large ol-transparent">
+        <div class="tile-content">
+            <span><a href="/blog/@post.Url/index.html"><h2>@post.Title</h2></a></span>
+        </div>
+    </div>
+}    
+</div>
+
