@@ -2,8 +2,8 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://fsprojects.github.io/FsBlog
-gitlocation: https://github.com/fsprojects/FsBlog.git
+url: http://http://www.naseukoly.cz/
+gitlocation: https://github.com/NaseUkolyCZ/naseukolycz.github.io.git
 gitbranch: gh-pages
 title: NašeÚkoly.CZ
 subtitle: Blog aware, static site generation using F#.

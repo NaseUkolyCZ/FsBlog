@@ -221,6 +221,8 @@ Target "Commit" DoNothing
 Target "DoNothing" DoNothing
 
 Target "GitClone" (fun _ ->
+    printfn "****** %s ******" (gitLocation.ToString())
+
     if(FileSystemHelper.directoryExists(deploy ++ ".git")) then
         ()
     else
