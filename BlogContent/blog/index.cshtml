@@ -9,7 +9,7 @@
 <div style="width: 100%;" class="tile-group no-margin no-padding">
 @foreach (var post in Enumerable.Take(Model.Posts, 10))
 {
-    <div  class="tile-large ol-transparent">
+    <div  class="tile-large ol-transparent" onclick="document.location.href='/blog/@post.Url/index.html'">
         <div class="tile-content">
             <span><a href="/blog/@post.Url/index.html"><h2>@post.Title</h2></a></span>
         </div>
