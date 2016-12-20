@@ -70,6 +70,10 @@ Had a lot of fun and although I did mostly the back end, but it looked like Angu
 When 2016 kicked in, I am helping my friends to add new Angular front end to their ASP.NET WebPages application from late 2000s. It is not my first Angular application, but for the first time
 (and definitely not for the last) we were adding Angular SPA to server generated application already many years in production.
 
+## F#
+
+I have described my path to programming in F# [several](https://github.com/fsharping/Docs/tree/master/004-FSharp%20v%20praxi) [times](http://fsharp.org/testimonials/#synctoday-1).
+
 ## [Fable](http://fable.io/) to the rescue
 
-So when I 
+So when I summed up
