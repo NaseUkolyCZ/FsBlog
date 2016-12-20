@@ -59,7 +59,17 @@ JavaScript, so ..." supported by nodding and affirmative grunts by the survivors
 
 ## Modern JavaScript
 
-About ten years later 
+About ten years later we were writing a ASP.NET MVC application for call centre agents build on the top of Microsoft Dynamics CRM. With the help of jQuery the code was much more readable
+now, but we still have to fight a lot of bugs in the runtime (and even production as part of the application was dynamically generated!). Not nice.
+
+Heard about something called Angular at that time, but the server side generated HTML approach was still too strong.
+
+Fast forward to mid-2015. We are writing an application for managing the front office clerks and their shifts. We decided to use ASP.NET Core and Angular. 
+Had a lot of fun and although I did mostly the back end, but it looked like Angular is very usable and ready to replace the ASP.NET MVC.
+
+When 2016 kicked in, I am helping my friends to add new Angular front end to their ASP.NET WebPages application from late 2000s. It is not my first Angular application, but for the first time
+(and definitely not for the last) we were adding Angular SPA to server generated application already many years in production.
 
 ## [Fable](http://fable.io/) to the rescue
 
+So when I 
