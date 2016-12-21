@@ -70,10 +70,24 @@ Had a lot of fun and although I did mostly the back end, but it looked like Angu
 When 2016 kicked in, I am helping my friends to add new Angular front end to their ASP.NET WebPages application from late 2000s. It is not my first Angular application, but for the first time
 (and definitely not for the last) we were adding Angular SPA to server generated application already many years in production.
 
-## F#
+## F# and FunScript
 
-I have described my path to programming in F# [several](https://github.com/fsharping/Docs/tree/master/004-FSharp%20v%20praxi) [times](http://fsharp.org/testimonials/#synctoday-1).
+I have described my path to programming in F# [several](https://github.com/fsharping/Docs/tree/master/004-FSharp%20v%20praxi) 
+[times](http://fsharp.org/testimonials/#synctoday-1).
+For the past years me and my colleagues have been using F# for:
+
+- writing simple console application
+- writing Outlook AddIns
+- writing ASP.NET web servers
+
+When we was asked by a customer if we were able to write [Office Add-ins](https://dev.office.com/docs/add-ins/overview/office-add-ins), I was not very happy first
+imagining we will have to write another JavaScript-only application.
+Then to my suprise, I found [FunScript](http://funscript.info/). I hoped to use it, I studied to source code and even [tried to contribute](https://github.com/ZachBray/FunScript/pull/204), 
+but it seems FunScript was already abandoned at that time.
 
 ## [Fable](http://fable.io/) to the rescue
 
-So when I summed up
+Then in February 2016, I found about [Fable](http://fable.io/). You can imagine how happy I was. A new world 
+
+## [fable-import-sharepoint](https://github.com/hsharpsoftware/fable-import-sharepoint)
+
