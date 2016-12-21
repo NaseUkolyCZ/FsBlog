@@ -8,6 +8,9 @@
 
 # Hello [fable-import-sharepoint](https://github.com/hsharpsoftware/fable-import-sharepoint)
 
+This post is about 3 month long journey to [fable-import-sharepoint](https://github.com/hsharpsoftware/fable-import-sharepoint). 
+Includes also a lot of information from [my](http://david.podhola.net) past.
+
 ## TL;DR
 
 ## Preface
@@ -87,7 +90,22 @@ but it seems FunScript was already abandoned at that time.
 
 ## [Fable](http://fable.io/) to the rescue
 
-Then in February 2016, I found about [Fable](http://fable.io/). You can imagine how happy I was. A new world 
+Then in February 2016, I found about [Fable](http://fable.io/). You can imagine how happy I was. A new world emerged.
+First small module we wrote was just a helper function working making complex tree structures flat. The results were amazing: 
+few hours writing F# code and the tests. Then transpilling into JavaScript and another few hours tweaking 
+the interface to be really usable from regular JavaScript.
+
+I was already aware [Ionide](http://ionide.io/) is written in F# and uses [Fable](http://fable.io/), but I needed to meet project where I would really use it.
 
 ## [fable-import-sharepoint](https://github.com/hsharpsoftware/fable-import-sharepoint)
+And then the JavaScript-only SharePoint appeared. I immediatelly decided we would need to have some support. 
+There were three basic areas, where Fable would help:
 
+- using [Visual Studio Code](https://code.visualstudio.com/) [with Ionide](https://docs.microsoft.com/en-us/dotnet/articles/fsharp/tutorials/getting-started/getting-started-vscode) 
+and the autocomplete not to have to remember [all the SharePoint functions by hearth](https://msdn.microsoft.com/en-us/library/office/jj163201.aspx)
+- creating the Domain Specific Language for the general SharePoint frontend development
+- creating specific types and functions related to the project domain (complex DMS with specific workflows and strict permission system)
+
+The first two from the list are shared in the [fable-import-sharepoint GitHub repository](https://github.com/hsharpsoftware/fable-import-sharepoint).
+
+### 
