@@ -108,4 +108,8 @@ and the autocomplete not to have to remember [all the SharePoint functions by he
 
 The first two from the list are shared in the [fable-import-sharepoint GitHub repository](https://github.com/hsharpsoftware/fable-import-sharepoint).
 
-### 
+### Creating `Fable.Import.Sharepoint*.fs`
+
+### `Browser.Support.fs`
+
+### `HSharp.fs`
