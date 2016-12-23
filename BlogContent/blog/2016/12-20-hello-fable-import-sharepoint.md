@@ -12,6 +12,8 @@ This post is about 3 month long journey to [fable-import-sharepoint](https://git
 Includes also a lot of information from [my](http://david.podhola.net) past.
 
 ## TL;DR
+Using [Fable](http://fable.io/) and [fable-import-sharepoint](https://github.com/hsharpsoftware/fable-import-sharepoint) you can easily create complex
+multisite SharePoint applications that make big changes to the user interface, start workflows from the browser etc.
 
 ## Preface
 Two months ago I became a part of a project team assigned a very interesting task - to rewrite a highly customized DMS on a top of Microsoft SharePoint.
@@ -170,4 +172,6 @@ If you implement `IApplication` interface, you can then add
 
 to your MasterPage.
 
-Function 
+Function `render` is called once time after the page is rendered when all the page is loaded onto the browser. 
+Function `scheduled` is scheduled to be called once per a second; can be used to e.g. dynamically change the user interface of the ribbon etc.
+
