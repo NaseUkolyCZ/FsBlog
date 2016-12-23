@@ -108,7 +108,16 @@ and the autocomplete not to have to remember [all the SharePoint functions by he
 
 The first two from the list are shared in the [fable-import-sharepoint GitHub repository](https://github.com/hsharpsoftware/fable-import-sharepoint).
 
-### Creating `Fable.Import.Sharepoint*.fs`
+Let me explain, how I created them and what they can be used to.
+
+### `Fable.Import.Sharepoint*.fs`
+These are the files that help the autocomplete (IntelliSense) provided by Inonide in Visual Studio Core.
+They were created by running slightly modified [ts2fable](https://github.com/fable-compiler/Fable/tree/master/src/ts2fable) 
+on files from [DefinitelyTyped/SharePoint](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/4869992bc079b88280b9ff91213528904109e8ae/sharepoint/index.d.ts)
+and then 
+working with the files by hand till the results were what I wanted them to be.
+
+Looks 
 
 ### `Browser.Support.fs`
 
