@@ -6,8 +6,6 @@
     Description = "";
 }
 
-# Hello [fable-import-sharepoint](https://github.com/hsharpsoftware/fable-import-sharepoint)
-
 This post is about 3 month long journey to [fable-import-sharepoint](https://github.com/hsharpsoftware/fable-import-sharepoint). 
 Includes also a lot of information from [my](http://david.podhola.net) past.
 
@@ -136,6 +134,7 @@ We created [`Browser.Support.fs`](https://github.com/hsharpsoftware/fable-import
 make it easier to write [jQuery](https://jquery.com/) calls in the functional way.
 
 Examples:
+
 - `Literals.Global.Ribbon.ApproveReject |> el |> hide`
 - `Literals.Global.Ribbon.S4RibbonRow |> el |> find ( Literals.Global.Ribbon.MsCuiCtlMedium ) |> last |> hide`
 - `Literals.AccessRequestRPR.RequestType.ID |> el |> change ( fun () -> showAndHide() ) |> ignore`
