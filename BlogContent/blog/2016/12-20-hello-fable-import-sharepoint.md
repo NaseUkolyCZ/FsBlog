@@ -111,14 +111,63 @@ The first two from the list are shared in the [fable-import-sharepoint GitHub re
 Let me explain, how I created them and what they can be used to.
 
 ### `Fable.Import.Sharepoint*.fs`
-These are the files that help the autocomplete (IntelliSense) provided by Inonide in Visual Studio Core.
-They were created by running slightly modified [ts2fable](https://github.com/fable-compiler/Fable/tree/master/src/ts2fable) 
+These are the files that help [the autocomplete (IntelliSense) provided by Ionide](https://www.youtube.com/watch?v=RGiwiAoIn6w) in Visual Studio Core.
+They were created by running slightly modified [`ts2fable`](https://github.com/fable-compiler/Fable/tree/master/src/ts2fable) 
 on files from [DefinitelyTyped/SharePoint](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/4869992bc079b88280b9ff91213528904109e8ae/sharepoint/index.d.ts)
 and then 
 working with the files by hand till the results were what I wanted them to be.
 
-Looks 
+Looks boring? Was not at all! [`ts2fable`](https://github.com/fable-compiler/Fable/tree/master/src/ts2fable) creates most of the content you need and 
+also in this task creativity is needed.
+
+The interface is far from perfect now, but was usable not only in the initial project, but also in all of the following.
+
+You can use it to write the classic SharePoint snippets like
+
+        let clientContext = SP.ClientContext.get_current()
+        let web = clientContext.get_web()
+        clientContext.load(web)
 
 ### `Browser.Support.fs`
 
+We created [`Browser.Support.fs`](https://github.com/hsharpsoftware/fable-import-sharepoint/blob/master/src/Fable.Import.SharePoint/Browser.Support.fs) to 
+make it easier to write [jQuery](https://jquery.com/) calls in the functional way.
+
+Examples:
+- `Literals.Global.Ribbon.ApproveReject |> el |> hide`
+- `Literals.Global.Ribbon.S4RibbonRow |> el |> find ( Literals.Global.Ribbon.MsCuiCtlMedium ) |> last |> hide`
+- `Literals.AccessRequestRPR.RequestType.ID |> el |> change ( fun () -> showAndHide() ) |> ignore`
+
+Note: this is no related to SharePoint development.
+
 ### `HSharp.fs`
+
+The requirements to change SharePoint user interface on multiple sites led to creating few small support functions in [`HSharp.fs`](https://github.com/hsharpsoftware/fable-import-sharepoint/blob/master/src/Fable.Import.SharePoint/HSharp.fs).
+If you implement `IApplication` interface, you can then add 
+
+    <SharePoint:ScriptLink runat="server" ID="NUCZScriptLink1" Language="javascript" Name="~site/SiteAssets/Scripts/MicrosoftAjax.js"/>
+    <SharePoint:ScriptLink runat="server" ID="NUCZScriptLink2" Language="javascript" Name="~site/SiteAssets/Scripts/jquery-1.7.2.min.js"/>
+    <SharePoint:ScriptLink runat="server" ID="NUCZScriptLink3" Language="javascript" Name="~site/SiteAssets/Scripts/core.min.js"/>
+    <SharePoint:ScriptLink runat="server" ID="NUCZScriptLink7" Language="javascript" Name="~site/SiteAssets/Scripts/jquery.SPServices-2014.02.js"/>
+    <SharePoint:ScriptLink runat="server" ID="NUCZScriptLink4" Language="javascript" Name="~site/_layouts/15/SP.Runtime.js"/>
+    <SharePoint:ScriptLink runat="server" ID="NUCZScriptLink5" Language="javascript" Name="~site/_layouts/15/SP.js"/>
+    <SharePoint:ScriptLink runat="server" ID="NUCZScriptLink8" Language="javascript" Name="~site/_layouts/15/SP.WorkflowServices.js"/>
+    <SharePoint:ScriptLink runat="server" ID="NUCZScriptLink9" Language="javascript" Name="~site/_layouts/15/SP.UI.Dialog.js"/>
+    <SharePoint:ScriptLink runat="server" ID="NUCZScriptLink10" Language="javascript" Name="~site/SiteAssets/Scripts/dropzone.js"/>
+    <SharePoint:ScriptLink runat="server" ID="NUCZScriptLink11" Language="javascript" Name="~site/SiteAssets/Scripts/rsvp-latest.js"/>
+        	<script type="text/javascript">
+	    // Load the required SharePoint libraries.
+	    $(document).ready(function () {
+	        ExecuteOrDelayUntilScriptLoaded(execOperation,"sp.js");
+	    });
+	
+	    function execOperation() {
+			HSharp.start();
+	    }
+	</script>	
+    <SharePoint:ScriptLink runat="server" ID="NUCZScriptLink6" Language="javascript" Name="~site/SiteAssets/Scripts/bundle.js"/>
+    <SharePoint:CssRegistration Name="<% $SPUrl:~site/SiteAssets/Scripts/dropzone.css %>" runat="server" />       
+
+to your MasterPage.
+
+Function 
