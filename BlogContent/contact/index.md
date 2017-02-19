@@ -12,6 +12,12 @@
   130 00 Praha 3<br>
   <abbr title="Email">E:</abbr> <a href="mailto:info@naseukoly.cz">info@naseukoly.cz</a>
 </address>
+<h2>Mailing address</h2>
+<address>
+  <strong>NašeÚkoly.CZ</strong><br>
+  Vojtěšská 31/28<br>
+  284 01 Kutná Hora<br>
+</address>
 <h2>Invoicing address</h2>
 <address>
   <strong>NašeÚkoly.CZ s.r.o.</strong><br>
