@@ -10,18 +10,23 @@
   <strong>NašeÚkoly.CZ</strong><br>
   Jičínská 1616/29<br>
   130 00 Praha 3<br>
+  Czech Republic<br>
   <abbr title="Email">E:</abbr> <a href="mailto:info@naseukoly.cz">info@naseukoly.cz</a>
 </address>
+<hr/>
 <h2>Mailing address</h2>
 <address>
   <strong>NašeÚkoly.CZ</strong><br>
   Vojtěšská 31/28<br>
   284 01 Kutná Hora<br>
+  Czech Republic<br>
 </address>
+<hr/>
 <h2>Invoicing address</h2>
 <address>
   <strong>NašeÚkoly.CZ s.r.o.</strong><br>
   Korunní 2569/108a<br>
   101 00 Praha 10 Vinohrady<br>
+  Czech Republic<br>
   VAT ID: CZ24180149
 </address>
